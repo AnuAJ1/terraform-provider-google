@@ -60,7 +60,7 @@ func TestAccCloudfunctions2function_cloudfunctions2BasicExample(t *testing.T) {
 
 func testAccCloudfunctions2function_cloudfunctions2BasicExample(context map[string]interface{}) string {
 	return tpgresource.Nprintf(`
-# [START functions_v2_basic]
+
 locals {
   project = "%{project}" # Google Cloud Platform Project ID
 }
@@ -103,7 +103,6 @@ resource "google_cloudfunctions2_function" "function" {
 output "function_uri" { 
   value = google_cloudfunctions2_function.function.service_config[0].uri
 }
-# [END functions_v2_basic]
 `, context)
 }
 
@@ -138,7 +137,6 @@ func TestAccCloudfunctions2function_cloudfunctions2FullExample(t *testing.T) {
 
 func testAccCloudfunctions2function_cloudfunctions2FullExample(context map[string]interface{}) string {
 	return tpgresource.Nprintf(`
-# [START functions_v2_full]
 locals {
   project = "%{project}" # Google Cloud Platform Project ID
 }
@@ -205,7 +203,6 @@ resource "google_cloudfunctions2_function" "function" {
     retry_policy = "RETRY_POLICY_RETRY"
   }
 }
-# [END functions_v2_full]
 `, context)
 }
 
@@ -240,7 +237,6 @@ func TestAccCloudfunctions2function_cloudfunctions2BasicGcsExample(t *testing.T)
 
 func testAccCloudfunctions2function_cloudfunctions2BasicGcsExample(context map[string]interface{}) string {
 	return tpgresource.Nprintf(`
-# [START functions_v2_basic_gcs]
 
 resource "google_storage_bucket" "source-bucket" {
   name     = "tf-test-gcf-source-bucket%{random_suffix}"
@@ -345,7 +341,6 @@ resource "google_cloudfunctions2_function" "function" {
     }
   }
 }
-# [END functions_v2_basic_gcs]
 `, context)
 }
 
@@ -380,7 +375,6 @@ func TestAccCloudfunctions2function_cloudfunctions2BasicAuditlogsExample(t *test
 
 func testAccCloudfunctions2function_cloudfunctions2BasicAuditlogsExample(context map[string]interface{}) string {
 	return tpgresource.Nprintf(`
-# [START functions_v2_basic_auditlogs]
 # This example follows the examples shown in this Google Cloud Community blog post
 # https://medium.com/google-cloud/applying-a-path-pattern-when-filtering-in-eventarc-f06b937b4c34
 # and the docs:
@@ -489,7 +483,6 @@ resource "google_cloudfunctions2_function" "function" {
     }
   }
 }
-# [END functions_v2_basic_auditlogs]
 `, context)
 }
 

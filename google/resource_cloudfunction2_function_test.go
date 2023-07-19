@@ -316,5 +316,5 @@ resource "google_cloudfunctions2_function" "function" {
     }
   }
 }
-
+`, context)
 }
