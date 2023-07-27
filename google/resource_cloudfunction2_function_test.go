@@ -208,7 +208,6 @@ func TestAccCloudFunctions2Function_fullUpdate(t *testing.T) {
 
 func testAccCloudfunctions2function_cloudfunctions2BasicAuditlogsExample_update(context map[string]interface{}) string {
 	return Nprintf(`
-# [START functions_v2_basic_auditlogs]
 # This example follows the examples shown in this Google Cloud Community blog post
 # https://medium.com/google-cloud/applying-a-path-pattern-when-filtering-in-eventarc-f06b937b4c34
 # and the docs:
@@ -316,5 +315,5 @@ resource "google_cloudfunctions2_function" "function" {
     }
   }
 }
-# [END functions_v2_basic_auditlogs]`, context)
+`, context)
 }
